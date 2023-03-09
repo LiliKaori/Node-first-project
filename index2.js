@@ -1,3 +1,7 @@
+//npm init -y => Começar um projeto node
+//npm i express => Instalar o framework express
+//npm i nodemon => Instalar nodemon facilita para testar projeto, criar palavra chave no package-lock.json em scripts
+//Nodemon "npm run dev"
 const express = require("express") //Pegar dados do express
 const port = 3000
 
@@ -14,7 +18,7 @@ const app = express() //Simplicar qndo usar a função
     // Route params => /users/2 BUSCAR, DELETAR OU ATUALIZAR ALGO ESPECÌFICO
     // Body params => /users
 
-//Nodemon "npm run dev"
+
 
 app.get("/users", (request, response) => {
     const name = request.query.name
