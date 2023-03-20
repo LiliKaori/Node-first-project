@@ -1,9 +1,11 @@
 const express = require("express")
 const uuid = require("uuid")
+const cors = require ("cors")
 
-const port = 3000
+const port = 3001
 const app = express()
 app.use(express.json())
+app.use(cors())
 
 const users = [] //Uma array teste só para testar códigos
 //Middleware => Interceptador: poder de parar ou alterar dados da requisição
@@ -33,7 +35,7 @@ app.post("/users", (request, response) => {
     const user = {id:uuid.v4(), name, age}
     users.push(user)
 
-    return response.status(201).json(users)
+    return response.status(201).json(user)
 })
 
 //PUT
